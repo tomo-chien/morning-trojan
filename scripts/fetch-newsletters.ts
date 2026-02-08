@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { PostData } from "@/lib/posts"
+import "dotenv/config";
 
 const CONTENT_DIR = path.join(process.cwd(), "src/content");
 
@@ -10,7 +11,7 @@ function sleep(ms: number) {
 
 async function fetchPostDetail(id: string) {
   const res = await fetch(
-    `https://api.beehiiv.com/v2/publications/${process.env.PUB_ID}/posts/${id}?expand=premium_web_content`,
+    `https://api.beehiiv.com/v2/publications/${process.env.BEEHIIV_PUB_ID}/posts/${id}?expand=premium_web_content`,
     {
       method: "GET",
       headers: {
@@ -32,7 +33,7 @@ async function fetchAllPosts() {
 
   while (true) {
     const res = await fetch(
-      `https://api.beehiiv.com/v2/publications/${process.env.PUB_ID}/posts?limit=100&page=${page}`,
+      `https://api.beehiiv.com/v2/publications/${process.env.BEEHIIV_PUB_ID}/posts?limit=100&page=${page}`,
       {
         method: "GET",
         headers: {
