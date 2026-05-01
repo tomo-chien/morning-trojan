@@ -3,7 +3,7 @@ import Nav from "@/components/nav";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://morning-trojan-seven.vercel.app"),
+  metadataBase: new URL("https://morningtrojan.com"),
   title: "Morning, Trojan",
   description: "The greatest USC newsletter that ever existed.",
   alternates: {
