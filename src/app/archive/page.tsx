@@ -6,6 +6,9 @@ import { DM_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Archive | Morning, Trojan",
+  openGraph: {
+    title: "Morning, Trojan archive",
+  },
 };
 
 const dmSans = DM_Sans({

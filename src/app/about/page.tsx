@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About | Morning, Trojan",
+  openGraph: {
+    title: "About Morning, Trojan",
+  },
 };
 
 export default function AboutPage() {
