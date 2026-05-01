@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/MT.png",
+        url: "/banner.jpg",
         alt: "Morning, Trojan",
       },
     ],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Morning, Trojan",
     description: "The greatest USC newsletter that ever existed.",
-    images: ["/MT.png"],
+    images: ["/banner.jpg"],
   },
 };
 

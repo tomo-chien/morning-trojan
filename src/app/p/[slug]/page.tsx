@@ -67,7 +67,7 @@ export async function generateMetadata({
     postData.description.trim() || "Archived post from Morning, Trojan.";
   const canonicalPath = `/p/${postData.slug}`;
   const hasThumbnail = postData.thumbnail_url.trim().length > 0;
-  const socialImage = hasThumbnail ? postData.thumbnail_url : "/MT.png";
+  const socialImage = hasThumbnail ? postData.thumbnail_url : "/banner.jpg";
 
   return {
     title: postData.title,
