@@ -1,0 +1,940 @@
+[
+  {
+    "Name": "Colleen B",
+    "Title": "Alum",
+    "Testimonial": "A light-hearted alternative to the NYT morning newsletter.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Sid P.",
+    "Title": "Student",
+    "Testimonial": "Funny as hell.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Kate K.",
+    "Title": "Staff",
+    "Testimonial": "I discovered this newsletter six months ago, and have loved reading it during that time!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jackson McKinley",
+    "Title": "Student",
+    "Testimonial": "Consistent, reliable, humorous coverage of USC news.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Angela Inostroza-Hoffman",
+    "Title": "Staff",
+    "Testimonial": "Amazing and witty reporting.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "MD",
+    "Title": "Student",
+    "Testimonial": "Man, I’ll miss your stuff.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jad M",
+    "Title": "UCLA Student",
+    "Testimonial": "Morning, Trojan\" is pretty good, at least for a USC operation!",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Amy Contreras",
+    "Title": "Student",
+    "Testimonial": "Morning, Trojan is unforgettable. I would read it for breakfast. What a run!",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Natalie Aguiar",
+    "Title": "Staff",
+    "Testimonial": "One of the highlights of my workdays.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Natalie LamJohnson",
+    "Title": "Student",
+    "Testimonial": "Always the first email I open in the morning. You make my day Tomo Chien.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Karan L.",
+    "Title": "Student",
+    "Testimonial": "Tomo Chien is a genius. If you don't believe me, just ask his mom: https://www.youtube.com/live/pKWNtjXYY2M?si=QHZidhcpulb3ukbi&t=1590",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Lesli Y.",
+    "Title": "Parent",
+    "Testimonial": "A more meaningful and informative resource than anything I’ve received from the school.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Shelly Lewis",
+    "Title": "Staff",
+    "Testimonial": "A must-read to find out what was happening across the university, especially in the last year with the financial troubles.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Trenton P",
+    "Title": "Student",
+    "Testimonial": "Tomo is my super idol",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jasmine Guzman",
+    "Title": "Student",
+    "Testimonial": "Reading it was my favorite thing to do in the morning when I got to campus.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jack Hallinan",
+    "Title": "Alum",
+    "Testimonial": "Morning, Trojan was the best goddamn student journalism I ever saw in my time at USC.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Elia M.",
+    "Title": "Both Staff and Alum",
+    "Testimonial": "I will miss the morning newsletters as I read them on my way to work.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "helen highland",
+    "Title": "Student",
+    "Testimonial": "The most consistent thing I’ve ever done is reading this newsletter in my morning mandatory attendance class.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Naoimh B",
+    "Title": "Student",
+    "Testimonial": "It kept me updated on everything around me in a way that no other news platform has done.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Nichelle M.",
+    "Title": "Staff",
+    "Testimonial": "It felt genuine in a world where there’s so much fake news.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "AB",
+    "Title": "Multiple",
+    "Testimonial": "Astounding scoops, natural wit, and a genuine sense of the human behind the work. If Tomo represents the future of journalism, we're in good hands.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Emily Anderson",
+    "Title": "Faculty",
+    "Testimonial": "You have that rarest of all gifts (seen mainly otherwise at dysfunctional Thanksgiving family dinners): the ability simultaneously to satirize and love the community of which you are a part.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Laura Castañeda",
+    "Title": "Faculty",
+    "Testimonial": "Tomo, you’ve made everyone very proud!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Ava Khan",
+    "Title": "Student",
+    "Testimonial": "Loved the humor and the voice!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "CJ",
+    "Title": "Staff",
+    "Testimonial": "Made my morning, learned so much! Always looked forward to it.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jessica S.",
+    "Title": "Staff",
+    "Testimonial": "The only newsletter I read every morning when I log into work.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jane Latman",
+    "Title": "Parent",
+    "Testimonial": "Responsibly reported and well-written. You brought humor to the work.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Gerald Davison",
+    "Title": "Faculty",
+    "Testimonial": "It's helped me stay informed as well as entertained.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Happy Wang",
+    "Title": "Student",
+    "Testimonial": "I read the email literally every weekday!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Tim Stanton",
+    "Title": "Staff",
+    "Testimonial": "A terrific source of solid reporting and humor.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Gabe Ariza",
+    "Title": "Staff",
+    "Testimonial": "The highlight of my morning routine.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jonathan K",
+    "Title": "Staff",
+    "Testimonial": "An invaluable resource for honest reporting about USC. A great source for students, staff, and faculty alike.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Marshell Miller Barber",
+    "Title": "Staff",
+    "Testimonial": "Very informative and funny at times. I'm going to miss it.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Travis S.",
+    "Title": "Staff",
+    "Testimonial": "Morning, Trojan was the best daily list since Letterman's Top Ten.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Sam Nora",
+    "Title": "Alum",
+    "Testimonial": "The news of Morning, Trojan shutting down has truly darkened my day.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Lyr Colin-Pacheco",
+    "Title": "Grad Student/TA",
+    "Testimonial": "I always appreciated your irreverence and the way you were able to speak true to, well, anything happening on campus.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Ethan Louie",
+    "Title": "Student",
+    "Testimonial": "My favorite source for USC news. Funny and actually covers issues students care about. It's been a consistent way to start my day for the last year. I'll miss it.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Marco Papa",
+    "Title": "Faculty",
+    "Testimonial": "Thanks for the great coverage.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Taylor S",
+    "Title": "Staff",
+    "Testimonial": "Thanks for keeping it real for the staff. We always know we will get the real scoop from y'all.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Alex Knoll",
+    "Title": "Staff",
+    "Testimonial": "Funny, informative and highly entertaining. It inspires great banter with my colleagues and will be greatly missed! It's truly our Trojan \"The Daily Show.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Marisa E.",
+    "Title": "Staff",
+    "Testimonial": "Epic reporting!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Sharina S",
+    "Title": "Alum",
+    "Testimonial": "Your hard work at the newsletter let us know more about our school. I enjoy reading it.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Laura F",
+    "Title": "Parent",
+    "Testimonial": "It has kept me up to date on campus news, and I never missed it!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Carol C.",
+    "Title": "Staff",
+    "Testimonial": "I could not believe this newsletter, which is head and shoulders above most newsy newsletters out there, was produced by a single, self-funded undergraduate student. The USC community has been a better place because of his voice.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Lance Ignon",
+    "Title": "Staff",
+    "Testimonial": "America would be better informed if more journalists wrote like Tomo. He combines dogged reporting with refreshing snark and humor to produce some of the best copy around.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Nora Rakoci",
+    "Title": "Student",
+    "Testimonial": "The highlight of my morning ever since subscribing! It has become a little ritual of mine to sit down to eat breakfast and go through the newsletter (or read it as I scroll in bed on the lazy days).",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Alexia R",
+    "Title": "Student",
+    "Testimonial": "How will I possibly survive my 8 a.m. classes if not by scrolling through my email and reading the absolute gem that is the Morning, Trojan newsletter? I am inconsolable.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jeremy P.",
+    "Title": "Staff",
+    "Testimonial": "Kudos to having built a brand within four years that most media would kill to have.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Lisa M",
+    "Title": "Prospective Student",
+    "Testimonial": "Thank you <3",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Aimee Ge",
+    "Title": "Student",
+    "Testimonial": "Morning, Trojan means a lot to me and it was the first thing that helped me feel connected to the campus when I came here in August.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Amy Becerra",
+    "Title": "Staff",
+    "Testimonial": "I read Morning, Trojan every day, and it became such a valuable source of transparency at USC — especially in spaces where that kind of openness often feels lacking.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "MP",
+    "Title": "Student",
+    "Testimonial": "Some of the most ridiculous things about this campus were perfectly phrased by Tomo in the most hilarious ways a sentence could be phrased.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Kathy Wong",
+    "Title": "Staff, prev alum and parent",
+    "Testimonial": "I skim through Morning, Trojan first thing in the morning as a trusted source of news on USC.  Enjoyed it much and shall miss this news source.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Amelia Jones",
+    "Title": "Faculty",
+    "Testimonial": "Morning Trojan was a lifesaver — both for facts and laughs. Conveying the darkness with a sense of humor has been such a winning combo.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Belen Robles",
+    "Title": "Former employee",
+    "Testimonial": "I loved reading your newsletter. It definitely made me chuckle and kept me very informed throughout the year.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Chris H",
+    "Title": "Parent",
+    "Testimonial": "Really enjoyed getting Morning Trojan. Sorry to see it end !!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "mo",
+    "Title": "Student",
+    "Testimonial": "ur awsome and the skills to inevestigate are superior",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Dan Clancy",
+    "Title": "Alum",
+    "Testimonial": "This was a fantastic newsletter and is far and away the best source of info on USC and LA",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Amy C.",
+    "Title": "Faculty",
+    "Testimonial": "I've been a reader, enjoyer, and avid screenshotter.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Samarth Sogani",
+    "Title": "Student",
+    "Testimonial": "Without fail, I read the Morning Trojan everyday. Engaging, informing, and always humorous.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Ken Fischer",
+    "Title": "Emeritus Faculty",
+    "Testimonial": "I have loved your posts.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jane B",
+    "Title": "Former employee of 19 years",
+    "Testimonial": "I have appreciated being kept abreast of things that have been going on at the university.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Daphne Baldassari",
+    "Title": "Faculty",
+    "Testimonial": "It has been a joy reading the newsletter and staying attuned with what is happening at USC and outside.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Gale Sinatra",
+    "Title": "Faculty",
+    "Testimonial": "I find it so hard to keep up with what is happening on campus because USC's official communications are not integrated. Morning, Trojan was great for making sure I learned the top news.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Tracy D.",
+    "Title": "Parent",
+    "Testimonial": "Mom of second-year from Pennsylvania. I've enjoyed your newsletter immensely. I read Morning, Trojan every day at lunch. (3 hour time difference.) Thank you for letting me in on West Coast news while on the East Coast.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Matthew H.",
+    "Title": "Student",
+    "Testimonial": "Such a daily fun read and kept me updated and entertained during my years as a Trojan!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Ari RM",
+    "Title": "Alum",
+    "Testimonial": "It has been amazing to watch you and this newsletter grow.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Nate Sloan",
+    "Title": "Faculty",
+    "Testimonial": "Feeling surprisingly emotional saying goodbye to this column! You brought news, humor, and sanity to my inbox everyday. Morning, Trojan kept me informed and gave me great talking points for the classroom and faculty meetings alike.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Mani Nagayanallur",
+    "Title": "Staff",
+    "Testimonial": "Our team really loved Morning, Trojan over the past few years.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Unnatee K",
+    "Title": "Student",
+    "Testimonial": "I’ll really miss the daily news that hit my inbox every weekday morning :(  I applaud you for making a newspaper that was both transparent and hilarious",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Emma B.",
+    "Title": "Student",
+    "Testimonial": "Since I started here last year, I have depended on Morning, Trojan to deliver USC-related news! It's such an awesome source",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Monica R.",
+    "Title": "Parent",
+    "Testimonial": "I am going to miss your morning snark. Your newsletter was the email I looked forward to most every day.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Mary Posatko",
+    "Title": "Alum",
+    "Testimonial": "The absolute best",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Paul Kovich",
+    "Title": "Staff",
+    "Testimonial": "I enjoyed reading your latest news and scoops about our university.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Pamela H",
+    "Title": "Parent",
+    "Testimonial": "You make us laugh! Thanks for the succinct and clear news.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Lily V",
+    "Title": "Student",
+    "Testimonial": "I seriously love this newsletter and i'm going to miss it so much",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jenny L.",
+    "Title": "Student",
+    "Testimonial": "I've always loved seeing the updates and found out so much USC \"breaking news\" through the newsletter.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Akilah",
+    "Title": "Parent",
+    "Testimonial": "You kept me in the know for what is going on at school and around the school. My son was even impressed because at times I was telling him what was going on ha ha ha!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Marlene Gaw",
+    "Title": "Parent",
+    "Testimonial": "I really appreciated the stories you chose to report on and the humor you delivered it with.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Adrian L",
+    "Title": "Student",
+    "Testimonial": "Loved the reads!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "JH",
+    "Title": "Faculty",
+    "Testimonial": "The humor and boldness from your newsletter made the past year tolerable. The USC community thanks you. I think some people take themselves too seriously, especially those in academia, and this newsletter helped put things in perspective.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Setsuko Sato",
+    "Title": "Parent",
+    "Testimonial": "Your daily dedication to the newsletter throughout four years of college has been amazing to watch.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Char B.",
+    "Title": "Parent",
+    "Testimonial": "I have been a USC mom for the past two years and reading Morning, Trojan every day has been one of my favorite things.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Sara Zambrano",
+    "Title": "Parent",
+    "Testimonial": "I have truly enjoyed reading your informative daily posts sprinkled with a bit of humor and sass.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Quratulain Bhatti",
+    "Title": "Alum",
+    "Testimonial": "Morning, Trojan has been my primary source of news about the big things happening on campus that were too complicated for me to understand.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Barry Albrecht",
+    "Title": "Alum",
+    "Testimonial": "I discovered Morning Trojan far too late and am now deeply depressed that it's going away. The newsletter was a must-read as soon as it hit my inbox every morning.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Matthew Suh",
+    "Title": "Student",
+    "Testimonial": "Morning, Trojan has been a staple of my daily routine since my freshman year. It’s the first email I open every single morning.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Anna Kanauka",
+    "Title": "Alum",
+    "Testimonial": "It was apparent that you had good contacts and plenty of people in the know contributing.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "wansun song",
+    "Title": "Parent",
+    "Testimonial": "I look forward to the current news each weekday morning as a way to stay in touch with the USC community that my youngest daughter is inhabiting.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Errol Stambler",
+    "Title": "Father of 3 went to usc, wife alumni of USC. My money went to tuition",
+    "Testimonial": "Informed and laughed each morning",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Ellen Landrum",
+    "Title": "Student",
+    "Testimonial": "Sometimes (more than I’d like to admit) Morning, Trojan is the only thing keeping me tethered to print journalism. It has brought some of the most important headlines of my time here at USC to my attention, and I will greatly miss it.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Dierdre Laterman",
+    "Title": "Parent",
+    "Testimonial": "It has helped me stay connected to what is happening on campus as well as the broader LA area.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Alicia g",
+    "Title": "Staff",
+    "Testimonial": "Love reading it. it will be missed",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Gabriel Kahn",
+    "Title": "Faculty",
+    "Testimonial": "Morning, Trojan will be missed.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "John Vidale",
+    "Title": "Faculty",
+    "Testimonial": "The most interesting and relevant email each morning.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Richard Green",
+    "Title": "Faculty",
+    "Testimonial": "I am more in the know about goings-on at the place I work because of it.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Darlene B",
+    "Title": "Parent",
+    "Testimonial": "On more than one occasion I enjoyed observing my son’s reaction to me having knowledge of specific topics or events. He seemed somewhat mystified by how I could have come by this information,  and I will miss that opportunity.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Sam Youngman",
+    "Title": "Faculty",
+    "Testimonial": "Morning Trojan has been a must-read, and I will miss it — and Tomo's brilliant sense of humor — dearly.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Becky H",
+    "Title": "Faculty",
+    "Testimonial": "You have provided the right mix of insightful news and fun fodder of SC.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Charlotte Ann",
+    "Title": "Alum",
+    "Testimonial": "This newsletter has me looking forward to my inbox every morning. It's been a great source of USC and other headlines and I'm going to sincerely miss it.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "CB",
+    "Title": "Student",
+    "Testimonial": "i love morning trojan. it isn’t afraid to give out raw news that other usc news places don’t.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Annie B.",
+    "Title": "Alum",
+    "Testimonial": "Love the bright tone, and the tough (yet fair) reporting!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Madison Shaw",
+    "Title": "Staff",
+    "Testimonial": "Morning, Trojan is like getting the news from a friend who actually knows what’s going on but refuses to be boring about it.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Serena Yang",
+    "Title": "Student",
+    "Testimonial": "I love Morning Trojan.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Janet Hoskins",
+    "Title": "Faculty",
+    "Testimonial": "This newsletter is funny, irreverent and has been a refreshing if astringent comment on both academic and public life at USC. I wish there were more students like this at USC.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Esther K. Chae",
+    "Title": "Faculty",
+    "Testimonial": "Tomo offered clear insights to what was actually going on, on campus, with great humor. That made some painful USC news more bearable.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "LD",
+    "Title": "Faculty",
+    "Testimonial": "In the midst of actively unsubscribing to many other emailed news sources, I've kept yours, because I read it and access timely, relevant news.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Lisa Bitel",
+    "Title": "Faculty",
+    "Testimonial": "Always served fresh with a modest dollop of uncontainable humor. I am sad to see some of the smartest and most sensible writing produced at the university disappear into the digital archive.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Aspen Cole",
+    "Title": "Staff",
+    "Testimonial": "Morning Trojan has been my primary and regular news source for USC related information. It truly improved my quality of life.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Blake B",
+    "Title": "Student",
+    "Testimonial": "The news articles were super helpful. A lot of this information I couldn't find or actively search for elsewhere.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Pauline B",
+    "Title": "Parent",
+    "Testimonial": "Thank you for this newsletter so that this mother-far-away could keep up with the local news while my kid was away at college.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Johanna",
+    "Title": "Staff",
+    "Testimonial": "You're hilarious!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jenn d.",
+    "Title": "Faculty",
+    "Testimonial": "I came for the content but stayed for the writing style and snark, and respect someone who will use profanity in polite company. I truly found it indispensable and am really sad it will go the way of the dodo.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Kat G",
+    "Title": "Staff",
+    "Testimonial": "A valuable resource to understand what's happening at USC.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Sarah M.",
+    "Title": "Staff",
+    "Testimonial": "Tomo's news sense is matched only by his sense of humor — and appreciation for the ironic (and absurd). Not the hero USC deserved but the hero we needed. ¡Viva Morning, Trojan!",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Max Matt",
+    "Title": "Student",
+    "Testimonial": "Amazing, funny, and genuinely entertaining.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Robin Mitchell Stroud",
+    "Title": "Staff",
+    "Testimonial": "My favorite news resource!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Violet Wang",
+    "Title": "Student",
+    "Testimonial": "I couldn't tell you the number of times I've eagerly screenshotted a headline to send to my friends, talked about you or your news with the Sack of Troy, or the amount of times I have lovingly stared at your decadent face, which is taped to my wall, next to my Carol Folt dartboard.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jessi K",
+    "Title": "Staff",
+    "Testimonial": "You've changed the game for sure!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Jamila Turalba-Khalil",
+    "Title": "Student",
+    "Testimonial": "I read it everyday and it is very helpful to know what’s going on at USC and the LA area especially if you aren’t local.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Claudia A",
+    "Title": "Staff",
+    "Testimonial": "I truly enjoyed the diverse content covered.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "kd",
+    "Title": "Faculty",
+    "Testimonial": "One of the best reads regarding breaking news on Campus as well as in the Los Angeles area.",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Andrea Harrow",
+    "Title": "Faculty",
+    "Testimonial": "It was good while it lasted. Keep the candor!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Huy L",
+    "Title": "Student",
+    "Testimonial": "THIS NEWSPAPER WAS EPIC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "MaryJo P",
+    "Title": "Parent",
+    "Testimonial": "My daughter started in the MFA screenwriting program last Fall and I love hearing all the news from her new home!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Dahlia Sarmiento",
+    "Title": "Student",
+    "Testimonial": "Tomo is the voice that has brought USC students from all across the RSO, major/minor, and cultural spectrum together. Whether it’s reporting on budget cuts, housing, elections, or greek life— he approaches every topic with both necessary professionalism and placating humor.",
+    "Highlight": "x",
+    "News clip": ""
+  },
+  {
+    "Name": "Annie H.",
+    "Title": "Former faculty",
+    "Testimonial": "Bright, witty, insightful and important journalism!",
+    "Highlight": "",
+    "News clip": ""
+  },
+  {
+    "Name": "Annenberg Media",
+    "Title": "",
+    "Testimonial": "A must-read among those closely following university developments.",
+    "Highlight": "x",
+    "News clip": "https://www.uscannenbergmedia.com/2026/03/31/after-four-years-and-12000-subscribers-student-run-morning-trojan-will-shut-down-in-may/"
+  },
+  {
+    "Name": "Daily Trojan",
+    "Title": "",
+    "Testimonial": "The most popular newsletter at USC.",
+    "Highlight": "x",
+    "News clip": "https://dailytrojan.com/2026/04/27/goodnight-trojan/"
+  },
+  {
+    "Name": "Creator Spotlight",
+    "Title": "",
+    "Testimonial": "The most essential newsletter for a 70,000-plus-person college community.",
+    "Highlight": "",
+    "News clip": "https://www.creatorspotlight.com/p/tomo-chien"
+  },
+  {
+    "Name": "West Coast Media Jobs",
+    "Title": "",
+    "Testimonial": "A daily must-read filled with scoops for USC students, faculty, and high-level admins alike.",
+    "Highlight": "",
+    "News clip": "https://westcoastmediajobs.substack.com/p/community-spotlight-on-tomo-chiens"
+  },
+  {
+    "Name": "The Nutgraf",
+    "Title": "",
+    "Testimonial": "A dominant force in USC’s student media ecosystem.",
+    "Highlight": "x",
+    "News clip": "https://nutgrafnews.substack.com/p/meet-the-usc-student-journalist-who-built-morning-trojan"
+  },
+  {
+    "Name": "Poynter",
+    "Title": "",
+    "Testimonial": "An outlier in the student media world.",
+    "Highlight": "x",
+    "News clip": "https://www.poynter.org/business-work/2026/morning-trojan-newsletter-student-media-creator-journalism/"
+  },
+  {
+    "Name": "The Sack of Troy",
+    "Title": "",
+    "Testimonial": "Fuck you Tomo",
+    "Highlight": "",
+    "News clip": "https://www.dailytrojan.org/#:~:text=Subscribe%20to%20our%20newsletter%20→"
+  }
+]

@@ -3,8 +3,31 @@ import Nav from "@/components/nav";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://morningtrojan.com"),
   title: "Morning, Trojan",
   description: "The definitive USC newsletter.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Morning, Trojan",
+    description: "The definitive USC newsletter.",
+    url: "/",
+    siteName: "Morning, Trojan",
+    type: "website",
+    images: [
+      {
+        url: "/og-default.png",
+        alt: "Morning, Trojan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Morning, Trojan",
+    description: "The definitive USC newsletter.",
+    images: ["/og-default.png"],
+  },
 };
 
 export default function RootLayout({
@@ -19,17 +42,6 @@ export default function RootLayout({
           <Nav />
           {children}
         </div>
-        <footer className="footer">
-          <p>
-            You&apos;re all caught up. Thanks for reading Morning, Trojan, and
-            have a good day. <a href="https://annahsu.dev">Anna Hsu</a> copy
-            edits this newletter and built this website.
-          </p>
-          <p>
-            &copy; {new Date().getFullYear()}{" "}
-            <a href="https://tomo.news">Tomoki Chien</a>.
-          </p>
-        </footer>
       </body>
     </html>
   );
