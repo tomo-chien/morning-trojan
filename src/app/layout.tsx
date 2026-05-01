@@ -5,19 +5,19 @@ import "@/app/globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://morningtrojan.com"),
   title: "Morning, Trojan",
-  description: "The definitive USC newsletter.",
+  description: "The greatest USC newsletter that ever existed.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Morning, Trojan",
-    description: "The definitive USC newsletter.",
+    description: "The greatest USC newsletter that ever existed.",
     url: "/",
     siteName: "Morning, Trojan",
     type: "website",
     images: [
       {
-        url: "/og-default.png",
+        url: "/MT.png",
         alt: "Morning, Trojan",
       },
     ],
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Morning, Trojan",
-    description: "The definitive USC newsletter.",
-    images: ["/og-default.png"],
+    description: "The greatest USC newsletter that ever existed.",
+    images: ["/MT.png"],
   },
 };
 
