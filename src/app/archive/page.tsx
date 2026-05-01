@@ -5,7 +5,7 @@ import GreatestHits from "@/components/greatestHits";
 import { DM_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Archive | Morning, Trojan",
+  title: "Archive",
   openGraph: {
     title: "Morning, Trojan archive",
   },
