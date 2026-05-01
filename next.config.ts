@@ -6,8 +6,18 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/subscribe/:path*",
+        destination: `${BEEHIIV}/subscribe/:path*`,
+        permanent: false,
+      },
+      {
         source: "/subscribe",
         destination: `${BEEHIIV}/subscribe`,
+        permanent: false,
+      },
+      {
+        source: "/unsubscribe/:path*",
+        destination: `${BEEHIIV}/unsubscribe/:path*`,
         permanent: false,
       },
       {
