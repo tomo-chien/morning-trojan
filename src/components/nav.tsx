@@ -12,7 +12,7 @@ const dmSans = DM_Sans({
 
 const links = [
   { href: "/about", label: "About" },
-  { href: "/testimonials", label: "Praise" },
+  { href: "/praise", label: "Praise" },
   { href: "/archive", label: "Archive" },
 ];
 
