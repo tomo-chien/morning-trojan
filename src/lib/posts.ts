@@ -12,6 +12,7 @@ export interface PostData {
   hidden: boolean;
   thumbnail_url: string;
   web_exclusive: boolean;
+  greatest_hit: boolean;
   authors: string[];
 }
 
@@ -22,7 +23,7 @@ export interface PostData {
  * @returns {Array} An array of objects with sorted newsletter data.
  */
 export function getSortedPostsData(): PostData[] {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith(".mdx"));
 
   const allPostsData = fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
@@ -68,7 +69,7 @@ export async function getPostData(slug: string): Promise<PostData & { content: s
  * @returns {Array} An array of objects with a slug for each newsletter.
  */
 export function getAllPostSlugs() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory).filter((f) => f.endsWith(".mdx"));
   return fileNames.map((fileName) => {
     return {
       slug: fileName.replace(/\.mdx$/, ""),

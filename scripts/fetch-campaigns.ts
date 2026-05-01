@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import "dotenv/config";
 
 const CONTENT_DIR = path.join(process.cwd(), "src/content");
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import { Document, EnrichedDocumentSearchResults } from "flexsearch";
 import { PostData } from "@/lib/posts";
@@ -11,12 +11,21 @@ type IndexablePostData = {
   content: string;
 };
 
+type SearchIndexEntry = {
+  slug: string;
+  title: string;
+  date: number;
+  hidden: boolean;
+  web_exclusive: boolean;
+  content: string;
+};
+
 interface PageLoadMoreProps {
   allPostsData: PostData[];
 }
 
 export default function PageLoadMore({ allPostsData }: PageLoadMoreProps) {
-  const limit = 20;
+  const limit = 30;
   const [visible, setVisible] = useState(limit);
   const [query, setQuery] = useState("");
   const [index, setIndex] = useState<Document<IndexablePostData>>();
@@ -24,13 +33,35 @@ export default function PageLoadMore({ allPostsData }: PageLoadMoreProps) {
     allPostsData.filter((post) => !post.hidden)
   );
   const [webExclusives, setWebExclusives] = useState(false);
-  const [sortAsc, setSortAsc] = useState(false);
-  const [random, setRandom] = useState(false);
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [yearOpen, setYearOpen] = useState(false);
+  const yearRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (yearRef.current && !yearRef.current.contains(e.target as Node)) {
+        setYearOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const years = useMemo(() => {
+    const ys = Array.from(
+      new Set(
+        allPostsData
+          .filter((p) => !p.hidden)
+          .map((p) => new Date(p.date).getFullYear())
+      )
+    ).sort((a, b) => b - a);
+    return ys;
+  }, [allPostsData]);
 
   useEffect(() => {
     async function load() {
       const res = await fetch("/search-index.json");
-      const data: (PostData & { content: string })[] = await res.json();
+      const data: SearchIndexEntry[] = await res.json();
 
       const idx = new Document<IndexablePostData>({
         document: {
@@ -41,18 +72,13 @@ export default function PageLoadMore({ allPostsData }: PageLoadMoreProps) {
         tokenize: "full",
       });
 
-      data.forEach((post) =>
-        idx.add({ slug: post.slug, title: post.title, content: post.content })
-      );
+      data
+        .filter((post) => !post.hidden)
+        .forEach((post) =>
+          idx.add({ slug: post.slug, title: post.title, content: post.content })
+        );
 
       setIndex(idx);
-      setResults(
-        data
-          .filter((p) => !p.hidden)
-          .sort(
-            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-          )
-      );
     }
 
     load();
@@ -61,25 +87,14 @@ export default function PageLoadMore({ allPostsData }: PageLoadMoreProps) {
   useEffect(() => {
     if (!index) return;
 
-    if (random) {
-      const index = Math.floor(Math.random() * allPostsData.length);
-      setResults(allPostsData.slice(index, index + 1));
-      setQuery("");
-      setWebExclusives(false);
-      return;
-    }
+    const base = allPostsData
+      .filter((p) => !p.hidden)
+      .filter((p) => !webExclusives || p.web_exclusive)
+      .filter((p) => !selectedYear || new Date(p.date).getFullYear() === selectedYear)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     if (query.trim() === "") {
-      setResults(
-        allPostsData
-          .filter((p) => !p.hidden)
-          .filter((p) => !webExclusives || p.web_exclusive)
-          .sort((a, b) =>
-            sortAsc
-              ? new Date(a.date).getTime() - new Date(b.date).getTime()
-              : new Date(b.date).getTime() - new Date(a.date).getTime()
-          )
-      );
+      setResults(base);
       setVisible(limit);
       return;
     }
@@ -89,197 +104,346 @@ export default function PageLoadMore({ allPostsData }: PageLoadMoreProps) {
     }) as EnrichedDocumentSearchResults<IndexablePostData>;
 
     const slugs = matches.flatMap((m) => m.result.map((r) => r.id));
-
-    const found = allPostsData
-      .filter((p) => slugs.includes(p.slug) && !p.hidden)
-      .filter((p) => !webExclusives || p.web_exclusive)
-      .sort((a, b) =>
-        sortAsc
-          ? new Date(a.date).getTime() - new Date(b.date).getTime()
-          : new Date(b.date).getTime() - new Date(a.date).getTime()
-      );
-
-    setResults(found);
+    setResults(base.filter((p) => slugs.includes(p.slug)));
     setVisible(limit);
-  }, [query, index, webExclusives, sortAsc, random, allPostsData]);
+  }, [query, index, webExclusives, selectedYear, allPostsData]);
 
   const showMore = () => setVisible((prev) => prev + limit);
+  const remaining = results.length - visible;
 
   return (
     <div className="posts-container">
-      <div className="filters">
+      <div className="search-row">
+        <svg className="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
         <input
           id="search"
           type="text"
-          placeholder="Search posts..."
+          placeholder={`Search ${allPostsData.filter((p) => !p.hidden).length} issues...`}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="search"
         />
-        <div className="buttons">
+      </div>
+
+      <div className="filters">
+        <div className="year-dropdown" ref={yearRef}>
           <button
-            className={webExclusives ? "filter filter-active" : "filter"}
-            onClick={() => {
-              setRandom(false);
-              setWebExclusives(!webExclusives);
-            }}
+            className={`chip year-btn${selectedYear ? " active" : ""}`}
+            onClick={() => setYearOpen((o) => !o)}
           >
-            Web exclusives only
-            {webExclusives && <X />}
+            {selectedYear ? selectedYear : "Filter by year"}
+            <svg className={`chevron${yearOpen ? " open" : ""}`} width="9" height="9" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
           </button>
-          <button className="filter" onClick={() => {
-            setRandom(false);
-            setSortAsc(!sortAsc);
-          }}>
-            {sortAsc ? "Sort Descending" : "Sort Ascending"}
-          </button>
-          <button
-            className={random ? "filter filter-active" : "filter"}
-            onClick={() => setRandom(!random)}
-          >
-            Random newsletter
-            {random && <X />}
-          </button>
+          {yearOpen && (
+            <div className="year-menu">
+              <button
+                className={`year-option${!selectedYear ? " selected" : ""}`}
+                onClick={() => { setSelectedYear(null); setYearOpen(false); }}
+              >
+                All years
+              </button>
+              {years.map((y) => (
+                <button
+                  key={y}
+                  className={`year-option${selectedYear === y ? " selected" : ""}`}
+                  onClick={() => { setSelectedYear(y); setYearOpen(false); }}
+                >
+                  {y}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
+        <button
+          className={`chip${webExclusives ? " active" : ""}`}
+          onClick={() => setWebExclusives(!webExclusives)}
+        >
+          Web exclusives
+          <span className="red-dot" />
+        </button>
       </div>
 
       <div className="posts">
-        {results
-          .slice(0, visible)
-          .map(({ slug, title, date, web_exclusive }) => (
-            <Link href={`/p/${slug}`} key={slug} className="list-item">
-              <h2 className="list-item-title">{title}</h2>
-              <span className="list-item-date">
-                {new Date(date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </span>
-              {web_exclusive && (
-                <span className="web-exclusive">web exclusive</span>
-              )}
-            </Link>
-          ))}
-        {query.trim() !== "" && results.length === 0 && (
-          <p className="no-results">No results found.</p>
+        {results.slice(0, visible).map(({ slug, title, date, web_exclusive }) => (
+          <Link href={`/p/${slug}`} key={slug} className="row">
+            <span className="row-date">
+              {new Date(date).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+              })}
+              <span className="row-year">{new Date(date).getFullYear()}</span>
+            </span>
+            <span className="row-title">
+              {web_exclusive ? (
+                <>
+                  {title.split(" ").slice(0, -1).join(" ")}{" "}
+                  <span style={{ whiteSpace: "nowrap" }}>
+                    {title.split(" ").slice(-1)[0]}
+                    <span className="red-dot" title="Web exclusive" />
+                  </span>
+                </>
+              ) : title}
+            </span>
+          </Link>
+        ))}
+        {results.length === 0 && (
+          <p className="no-results">
+            {query.trim() ? `No results for "${query}"` : "No issues match these filters."}
+          </p>
         )}
       </div>
 
       {visible < results.length && (
-        <div>
-          <button onClick={showMore} className="load-more-btn">
-            Load More
-          </button>
-        </div>
+        <button onClick={showMore} className="load-more">
+          {remaining > limit ? `Show ${limit} more` : `Show ${remaining} more`}
+        </button>
       )}
 
       <style>{`
-        a {
-          text-decoration: none;
-          color: inherit;
+        .posts-container {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding-bottom: 4rem;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .search-row {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          border: 1px solid rgba(0,0,0,0.18);
+          border-radius: 8px;
+          padding: 0.55rem 0.75rem;
+          transition: border-color 150ms ease;
+        }
+
+        .search-row:focus-within {
+          border-color: rgba(0,0,0,0.5);
+        }
+
+        .search-icon {
+          color: rgba(0,0,0,0.3);
+          flex-shrink: 0;
+        }
+
+        .search {
+          flex: 1;
+          font-family: inherit;
+          font-size: 0.85rem;
+          background: none;
+          border: none;
+          outline: none;
+          color: #000;
+        }
+
+        .search::placeholder {
+          color: rgba(0, 0, 0, 0.28);
         }
 
         .filters {
           display: flex;
-          flex-direction: column;
+          align-items: center;
           gap: 0.5rem;
+          padding-bottom: 0.5rem;
         }
 
-        .search {
-          outline: none;
-          border-radius: 6px;
-          border: 1px solid #888;
-          padding: 0.5rem 0.75rem;
+        .year-dropdown {
+          position: relative;
         }
 
-        .search:active, .search:focus {
-          border: 1px solid #222;
-        }
-
-        .buttons {
+        .year-btn {
           display: flex;
-          flex-flow: row wrap;
-          gap: 0.5rem;
+          align-items: center;
+          gap: 0.3rem;
+        }
+
+        .chevron {
+          transition: transform 200ms ease;
+          flex-shrink: 0;
+        }
+
+        .chevron.open {
+          transform: rotate(180deg);
+        }
+
+        .year-menu {
+          position: absolute;
+          top: calc(100% + 0.4rem);
+          left: 0;
+          background: #fff;
+          border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 12px;
+          padding: 0.3rem;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+          z-index: 10;
+          min-width: 7rem;
+          animation: menuIn 150ms cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        .year-option {
+          font-family: inherit;
+          font-size: 0.78rem;
+          font-weight: 400;
+          background: none;
+          border: none;
+          border-radius: 8px;
+          padding: 0.35rem 0.65rem;
+          text-align: left;
+          cursor: pointer;
+          color: rgba(0,0,0,0.6);
+          transition: background 120ms ease, color 120ms ease;
+        }
+
+        .year-option:hover {
+          background: rgba(0,0,0,0.05);
+          color: #000;
+        }
+
+        .year-option.selected {
+          font-weight: 600;
+          color: #000;
+        }
+
+        @keyframes menuIn {
+          from { opacity: 0; transform: translateY(-4px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .chip {
+          font-family: inherit;
+          font-size: 0.75rem;
+          font-weight: 500;
+          background: none;
+          border: 1px solid rgba(0, 0, 0, 0.18);
+          border-radius: 999px;
+          padding: 0.25rem 0.7rem;
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.45);
+          white-space: nowrap;
+          transition: all 150ms ease;
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+        }
+
+        .chip.active {
+          background: #000;
+          border-color: #000;
+          color: #fff;
+        }
+
+        .chip:not(.active):hover {
+          border-color: rgba(0, 0, 0, 0.4);
+          color: #000;
         }
 
         .posts {
           display: flex;
           flex-direction: column;
+        }
+
+        .row {
+          display: grid;
+          grid-template-columns: 5.5rem 1fr;
           gap: 1rem;
+          align-items: baseline;
+          padding: 0.6rem 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+          text-decoration: none;
+          color: inherit;
         }
 
-        .list-item-title {
-          font-size: 1.25rem;
-          margin: 0;
+        .row:first-child {
+          border-top: 1px solid rgba(0, 0, 0, 0.07);
         }
 
-        .list-item-date {
+        .row:hover .row-title {
+          color: #b81f1f;
+        }
+
+        .row-date {
           font-size: 0.75rem;
-        }
-
-        .web-exclusive {
-          font-size: 0.75rem;
-          margin-left: 1rem;
-          background-image: linear-gradient(to top, rgba(255, 0, 0, 0.25) 30%, transparent 40%);
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
-        }
-
-        .posts-container {
+          color: rgba(0, 0, 0, 0.35);
+          font-weight: 400;
           display: flex;
           flex-direction: column;
-          gap: 2rem;
+          line-height: 1.2;
+          flex-shrink: 0;
         }
 
-        .load-more-btn, .filter {
-          font-family: inherit;
-          font-size: 0.75rem;
-          color: var(--white);
-          background: var(--red);
-          padding: 0.5rem 0.75rem;
-          border-radius: 12px;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          gap: 0.25rem;
-          border: 1.5px solid var(--red);
+        .row-year {
+          font-size: 0.65rem;
+          color: rgba(0, 0, 0, 0.22);
         }
 
-        .filter-active {
-          background: var(--white);
-          color: var(--red);
+        .row-title {
+          font-size: 0.95rem;
+          font-weight: 500;
+          line-height: 1.35;
+          color: #111;
+          transition: color 150ms ease;
         }
 
-        .load-more-btn:active, .filter:active {
-          transform: scale(0.9);
-          transition: 0.3s;
+        .red-dot {
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #b81f1f;
+          margin-left: 0.4rem;
+          vertical-align: middle;
+          flex-shrink: 0;
         }
 
         .no-results {
-          margin-top: -1rem;
-          font-size: 0.9rem;
+          font-size: 0.875rem;
+          color: rgba(0, 0, 0, 0.4);
+          padding: 1.5rem 0;
+          margin: 0;
+        }
+
+        .load-more {
+          font-family: inherit;
+          font-size: 0.8rem;
+          font-weight: 500;
+          background: none;
+          border: 1px solid rgba(0,0,0,0.2);
+          border-radius: 8px;
+          padding: 0.55rem 1.25rem;
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.55);
+          transition: all 150ms ease;
+          align-self: center;
+        }
+
+        .load-more:hover {
+          border-color: rgba(0,0,0,0.5);
+          color: #000;
+        }
+
+        @media (max-width: 640px) {
+          .row {
+            grid-template-columns: 3.8rem 1fr;
+            gap: 0.6rem;
+          }
+
+          .row-date {
+            font-size: 0.65rem;
+          }
+
+          .row-title {
+            font-size: 0.9rem;
+          }
         }
       `}</style>
     </div>
-  );
-}
-
-export function X() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
   );
 }

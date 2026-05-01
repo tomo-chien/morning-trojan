@@ -32,6 +32,7 @@ function getAllPosts() {
         slug,
         title: data.title || slug,
         date: data.date || null,
+        hidden: data.hidden ?? false,
         web_exclusive: data.web_exclusive ?? false,
         content: cleanContent(content), // cleaned text
       };
