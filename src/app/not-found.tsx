@@ -12,8 +12,7 @@ export default function NotFound() {
       <div className="container">
         <p className="code">404</p>
         <h1 className="heading">Page not found</h1>
-        <p className="sub">This issue doesn&apos;t exist — or maybe it never ran.</p>
-        <Link href="/archive" className="link">Browse the archive →</Link>
+        <Link href="/" className="link">Take me to the homepage →</Link>
       </div>
 
       <style>{`
@@ -37,12 +36,6 @@ export default function NotFound() {
           font-weight: 700;
           letter-spacing: -0.04em;
           margin: 0 0 0.5rem;
-        }
-
-        .sub {
-          font-size: 0.95rem;
-          color: rgba(0,0,0,0.45);
-          margin: 0 0 1.5rem;
         }
 
         .link {
